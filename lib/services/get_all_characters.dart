@@ -4,11 +4,13 @@ import 'dart:convert';
 import 'package:sc_rick_and_morty/models/characters_list.dart';
 
 class GetAllCharacters {
-  Uri? nextPageUrl = Uri.https('https://rickandmortyapi.com/api/character');
+  Uri? nextPageUrl = Uri.https('rickandmortyapi.com', 'api/character');
 
   Future<CharacterListResponse?> downloadNextPage() async {
     if (nextPageUrl == null) {
       return null;
+    } else {
+      nextPageUrl = nextPageUrl;
     }
 
     final http.Response response = await http.get(nextPageUrl!);
