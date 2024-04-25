@@ -7,7 +7,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const CharactersListWidget(),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: CharactersListWidget(),
+      ),
       appBar: AppBar(title: const Text('Rick and Morty')),
     );
   }
