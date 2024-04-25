@@ -42,6 +42,6 @@ Follow these steps to get started with the project:
    ```
 4. Run the app.
 
-## Getting Started
+## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems or have suggestions for improvements.
