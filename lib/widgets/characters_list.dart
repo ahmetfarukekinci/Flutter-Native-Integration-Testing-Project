@@ -4,8 +4,6 @@ import 'package:sc_rick_and_morty/models/character.dart';
 import 'package:sc_rick_and_morty/services/get_all_characters.dart';
 import 'package:sc_rick_and_morty/widgets/character_card.dart';
 
-const baseUrl = 'https://rickandmortyapi.com/api/character';
-
 class CharactersList extends StatefulWidget {
   const CharactersList({super.key});
 
@@ -45,7 +43,7 @@ class _CharactersListState extends State<CharactersList> {
     super.initState();
     _scrollController.addListener(_scrollListener);
 
-    getCharacters(nextPage: baseUrl);
+    getCharacters();
   }
 
   @override
