@@ -21,16 +21,12 @@ class CharacterDetails extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Image.network(
-                character.image,
-                height: 200,
-                width: 200,
-                fit: BoxFit.cover,
-              ),
+            Image.network(
+              character.image,
+              height: 200,
+              width: 200,
+              fit: BoxFit.cover,
             ),
             const SizedBox(height: 20),
             CharacterDetailInfoRow(text: character.species, icon: Icons.person),

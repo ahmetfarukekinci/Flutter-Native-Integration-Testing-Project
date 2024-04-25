@@ -9,10 +9,21 @@ class CharacterDetailInfoRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      Icon(icon),
-      const SizedBox(width: 10),
-      Text(text),
-    ]);
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(children: [
+        Icon(
+          icon,
+          size: 50,
+        ),
+        const SizedBox(width: 10),
+        Text(
+          text,
+          style: const TextStyle(
+            fontSize: 20,
+          ),
+        ),
+      ]),
+    );
   }
 }
