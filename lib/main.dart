@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sc_rick_and_morty/screens/home.dart';
+import 'package:sc_rick_and_morty/theme/dark_theme.dart';
+import 'package:sc_rick_and_morty/theme/light_theme.dart';
 
 void main() {
   runApp(const RickAndMorty());
@@ -12,10 +14,9 @@ class RickAndMorty extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Rick and Morty',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-          useMaterial3: true,
-        ),
+        theme: lighTheme,
+        darkTheme: darkTheme,
+        themeMode: ThemeMode.system,
         home: Home(
           key: key,
         ));

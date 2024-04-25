@@ -69,21 +69,24 @@ class _CharactersListWidgetState extends State<CharactersListWidget> {
         itemBuilder: (BuildContext context, int index) {
           final firstElement = _charactersList[index * 2];
           final secondElement = _charactersList[index * 2 + 1];
-          return Row(
-            children: [
-              Expanded(
-                  child: CharacterCard(
-                character: firstElement,
-              )),
-              const SizedBox(width: 8),
-              Expanded(
-                child: index * 2 + 1 < _charactersList.length
-                    ? CharacterCard(
-                        character: secondElement,
-                      )
-                    : Container(),
-              ),
-            ],
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 2),
+            child: Row(
+              children: [
+                Expanded(
+                    child: CharacterCard(
+                  character: firstElement,
+                )),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: index * 2 + 1 < _charactersList.length
+                      ? CharacterCard(
+                          character: secondElement,
+                        )
+                      : Container(),
+                ),
+              ],
+            ),
           );
         });
   }

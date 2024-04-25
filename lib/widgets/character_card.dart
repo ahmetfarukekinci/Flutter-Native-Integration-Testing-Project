@@ -21,7 +21,6 @@ class CharacterCard extends StatelessWidget {
         _onTap(context);
       },
       child: Card(
-        color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
