@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sc_rick_and_morty/models/character.dart';
 
 class CharacterCard extends StatelessWidget {
-  const CharacterCard({super.key, required this.image, required this.name});
+  const CharacterCard({super.key, required this.character});
 
-  final String image;
-  final String name;
+  final Character character;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CharacterCard extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: Image.network(
-                image,
+                character.image,
                 width: 100,
                 height: 100,
                 fit: BoxFit.cover,
@@ -30,7 +30,7 @@ class CharacterCard extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              name,
+              character.name,
               style: const TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,

@@ -73,12 +73,14 @@ class _CharactersListWidgetState extends State<CharactersListWidget> {
             children: [
               Expanded(
                   child: CharacterCard(
-                      image: firstElement.image, name: firstElement.name)),
+                character: firstElement,
+              )),
               const SizedBox(width: 8),
               Expanded(
                 child: index * 2 + 1 < _charactersList.length
                     ? CharacterCard(
-                        image: secondElement.image, name: secondElement.name)
+                        character: secondElement,
+                      )
                     : Container(),
               ),
             ],
