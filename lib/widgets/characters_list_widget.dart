@@ -4,14 +4,14 @@ import 'package:sc_rick_and_morty/models/character.dart';
 import 'package:sc_rick_and_morty/services/get_all_characters.dart';
 import 'package:sc_rick_and_morty/widgets/character_card.dart';
 
-class CharactersList extends StatefulWidget {
-  const CharactersList({super.key});
+class CharactersListWidget extends StatefulWidget {
+  const CharactersListWidget({super.key});
 
   @override
-  State<CharactersList> createState() => _CharactersListState();
+  State<CharactersListWidget> createState() => _CharactersListWidgetState();
 }
 
-class _CharactersListState extends State<CharactersList> {
+class _CharactersListWidgetState extends State<CharactersListWidget> {
   List<Character> _charactersList = [];
   String? nextPageUrl;
 
@@ -88,9 +88,6 @@ class _CharactersListState extends State<CharactersList> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white70,
-      child: _buildList(),
-    );
+    return _buildList();
   }
 }
