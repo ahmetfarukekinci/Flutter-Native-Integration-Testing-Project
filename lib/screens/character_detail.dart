@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_widget/home_widget.dart';
 import 'package:sc_rick_and_morty/models/character.dart';
 import 'package:sc_rick_and_morty/widgets/character_detail_info_row.dart';
 
@@ -9,6 +10,14 @@ class CharacterDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void updateAndroidWidget() {
+      HomeWidget.saveWidgetData("title", character.name);
+      HomeWidget.saveWidgetData("image", character.image);
+      HomeWidget.updateWidget(
+        androidName: "CharacterHomeWidget",
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(character.name),
@@ -34,6 +43,11 @@ class CharacterDetails extends StatelessWidget {
                 icon: Icons.transgender, text: character.gender),
             CharacterDetailInfoRow(
                 icon: Icons.favorite, text: character.status),
+            TextButton(
+                onPressed: () {
+                  updateAndroidWidget();
+                },
+                child: const Text("Update Widget"))
           ],
         ),
       ),
