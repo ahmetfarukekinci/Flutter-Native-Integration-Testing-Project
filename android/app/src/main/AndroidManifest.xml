@@ -18,7 +18,7 @@
 
     <application
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher_icon"
         android:label="sc_rick_and_morty">
         <receiver
             android:name=".CharacterHomeWidget"
