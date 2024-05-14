@@ -12,15 +12,19 @@ The project showcases how to make HTTP requests using Flutter's built-in librari
 
 Demonstrates the implementation of an endless scroll ListView, allowing seamless scrolling through a large dataset without loading all items at once.
 
-### 3. Navigation with Parameter Passing
+### 3. Android Integration with home_widget Library and Glide
+
+This project demonstrates how to integrate native Android functionality into a Flutter app. It includes an example of using the `home_widget` library in Android projects and demonstrates how to display an image URL in a widget using the Glide library in Android Kotlin.
+
+### 4. Navigation with Parameter Passing
 
 Illustrates how to navigate between different screens in Flutter and pass parameters between them. This is useful for passing data from one screen to another.
 
-### 4. Dark and Light Theme Implementation
+### 5. Dark and Light Theme Implementation
 
 Shows how to implement both dark and light themes in a Flutter app. Additionally, it demonstrates how the app can automatically switch between light and dark themes based on the system settings.
 
-### 5. Unit Testing and Image.Network Mocking
+### 6. Unit Testing and Image.Network Mocking
 
 Includes unit tests covering various aspects of the application's functionality. Specifically, it demonstrates how to mock Image.Network requests in unit tests to ensure reliable testing even with network-dependent widgets.
 
