@@ -51,10 +51,11 @@ class CharacterHomeWidget : AppWidgetProvider() {
         for (appWidgetId in appWidgetIds) {
 
         val widgetData = HomeWidgetPlugin.getData(context)
-            val views =   RemoteViews(context.packageName, R.layout.character_home_widget)
-            val image = widgetData.getString("image","image")
-            println("image url $image")
 
+            val views =   RemoteViews(context.packageName, R.layout.character_home_widget)
+
+            val titleText = widgetData.getString("title","title")
+            val imageURL = widgetData.getString("image","image")
 
             val awt: AppWidgetTarget = object : AppWidgetTarget(context, R.id.imageView, views, *appWidgetIds) {
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
@@ -62,36 +63,10 @@ class CharacterHomeWidget : AppWidgetProvider() {
                 }
             };
 
-            Glide.with(context).asBitmap().load(image).into(awt)
+            Glide.with(context).asBitmap().load(imageURL).into(awt)
 
-
-            val title = widgetData.getString("title","title")
-            views.setTextViewText(R.id.appwidget_text,title)
-            //views.setImageViewUri(R.id.imageView,imageUri)
-            //updateAppWidget(context, appWidgetManager, appWidgetId)
+            views.setTextViewText(R.id.appwidget_text,titleText)
             appWidgetManager.updateAppWidget(appWidgetId,views)
         }
     }
-
-    override fun onEnabled(context: Context) {
-        // Enter relevant functionality for when the first widget is created
-    }
-
-    override fun onDisabled(context: Context) {
-        // Enter relevant functionality for when the last widget is disabled
-    }
-}
-
-internal fun updateAppWidget(
-    context: Context,
-    appWidgetManager: AppWidgetManager,
-    appWidgetId: Int
-) {
-    val widgetText = context.getString(R.string.appwidget_text)
-    // Construct the RemoteViews object
-    val views = RemoteViews(context.packageName, R.layout.character_home_widget)
-    views.setTextViewText(R.id.appwidget_text, widgetText)
-
-    // Instruct the widget manager to update the widget
-    appWidgetManager.updateAppWidget(appWidgetId, views)
 }
