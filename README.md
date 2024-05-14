@@ -1,6 +1,6 @@
 # Flutter HTTP Request and Testable ListView Example
 
-This Flutter project demonstrates the basic concepts of making HTTP requests, implementing an endless scroll ListView, navigating between screens with parameter passing, implementing dark and light themes with system-aware theme changes, and writing unit tests including mocking Image.Network requests.
+This Flutter project demonstrates the basic concepts of making HTTP requests, implementing an endless scroll ListView, navigating between screens with parameter passing, implementing dark and light themes with system-aware theme changes, and writing unit tests including mocking Image.Network requests. Additionally, it showcases native integration using the `home_widget` library, establishing communication between Flutter and native platforms with a third-party library on the native side.
 
 ## Features
 
